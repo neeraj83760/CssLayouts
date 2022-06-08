@@ -1,0 +1,57 @@
+.parent{
+
+    border: 1px solid rebeccapurple;
+    padding: 20px;
+    width: 50%;
+    /* display: inline-block; */
+    margin:100px;
+    /* position: relative; */
+
+}
+
+.child1{
+
+    background-color: dodgerblue;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 25%;
+
+}
+
+.child2{
+   
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    /* relative property sirf apni jagah chodta hai as per the given top and bottom left right
+       but apni space pe kisi aur element ko aane nahi deta ... aur abosolute is totally 
+       vice-versa hai .... + wo move karta hai as per it's just above parent aur agar parent
+       positoined( I mean usme agar koi parent nahi position property nahi dala hai to) nahi hai to
+       to herrachy me top ki elements tak search karta jaayega till the body element  
+    */
+    /* position: relative;
+    top:10px; 
+    bottom: 10px;
+    right: 20px; */
+    /* position: absolute; */
+    /* bottom:0px; */
+    /* right: 0px; */
+    border-radius: 25%;
+
+}
+
+
+
+.child3{
+
+   background-color: tomato; 
+   width: 100px;
+   height: 100px;
+   display: inline-block;
+   border-radius: 25%;
+
+}
+
+

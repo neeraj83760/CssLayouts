@@ -1,0 +1,124 @@
+.container{
+
+    display: grid;
+    /* 3 x 2 */
+
+    /* grid-template-rows: 100px 100px 100px; */
+    /* grid-template-rows: repeat(3, 100px); */
+    /* grid-template-columns: 100px 100px; */
+    /* grid-template-columns: repeat(2, 100px); */
+
+    /* short cut for the rol and column properties of thegrid is */
+    /* grid-template:repeat(3, 100px)/ repeat(2,100px);  */
+    
+    /* fr fraction unit is more safer than compare to % because fr divide the space in the grid
+       not devide the complete space 
+    */
+     
+    /* 100px is the absolute width ..... 30fr is a relative width  */
+    grid-template: repeat(3,100px) / 30fr 70fr;
+
+    /*  The auto takes the entire space   */
+    /* grid-template: 100px auto 100px / 30fr 70fr; */
+
+
+    border: 1px solid lightgray;
+    /* justify-items: center;   */
+    /* the justify-items will align the items along the horizontal axis  */
+    /* align-items: center;  */
+    /* the align items property assign the items as per the vertical axis */
+    /* in short : agar aapko content bilkul middle me chahiye within the specific grid
+       to aapko justify-items and align items property ko center me hi karna padega 
+    */
+
+    height: 100vh;
+    gap: 10px;
+
+    /* VVVIMP point : agar aapko jo grid banayi hai wo center me chaiye to below two 
+       properties ka use karna padega 
+
+       justify-content:center this will move the grid in the center 
+
+       We also have align-content for vertical alignment , but for this property
+       we also need the sufficent viewport height(example : 100vh) so the we can center the grid along
+       the vertical axis as well.
+       
+       
+       Key point to remember : if u found "content" in the property means we are refering to the
+       whole grid but if u see "items" in the property it means we are referring to individual items
+       in the grid 
+
+
+       Default properties for the justify items and align items is : strech 
+       like : justify-items: strech
+              align-items: strech 
+       
+        but the above property will not work if u set the width property of the 
+        individual items in the grid       
+         
+        similary if we remove the height property from the individual elements 
+        then align-items property in the parent container will strech the element vertically
+        and fill the entire vertical box
+
+    */
+}
+
+/* justify-items: assigning along the x axis */
+/* align-items: assgning along the y axis */
+
+
+/*  For gap between the grids we have row gap and column gap properties
+ 1 ) Row-Gap
+ 2)  column-gap
+ 3) gap: this the shortcut for the above two properties 
+*/
+
+
+/* Placing items in the grid means : ek grid ka item kaha se kaha tak display hoga
+    
+   properties are mentioned below :
+
+   grid-row: 1/2
+   grid-column:
+   grid-aera: this is the combination of the above two properties 
+
+*/
+
+/* Grid template areas : placing items in the named area
+   
+   grid-template-areas: "header header "
+                         "sidebar main"
+                         " footer footer"
+   
+   we can set the above property in the same way in the parent container 
+   and access it in any child element by writing the below mentioned code
+   
+                         grid-area:header   .... this will act as like grid-row and grid-column
+                         property  
+
+
+   grid-template-areas: "header header "
+                         "sidebar main"
+                         " . footer" 
+                         
+   suppose u don't want any specfic area for example we don't need the one foot item
+   in one grid we can simply put the period sign there that's it                       
+*/
+
+.box{
+
+  /* width: 5rem ; */
+  /* height: 5rem; */
+  background-color: gold;
+}
+
+
+.box-one{
+
+    grid-column: 2;
+    /* the above line of code will just move the first item in the second column  */
+    /* grid-row: 2;  */
+    /* the above line of code will move the item in the second row and second row
+       content will move to the top 
+    */
+}

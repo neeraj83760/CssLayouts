@@ -1,0 +1,30 @@
+*, ::before,::after{box-sizing: border-box;}
+
+/* boxsizing property don;t apply on sudo elements  */
+span::before{
+
+    content: "Hello";
+}
+
+span{
+
+    /* display: inline-block; 
+    without this u will not be able to give the change
+    the height and width of the span element even after mentioning in 
+    css  
+    */
+    display: inline-block;   
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border: 2px solid dodgerblue; 
+    background-color: gold;
+    /* box-sizing: border-box; */
+    /* boxsizing border box agar property doge to height and widith padding and border me
+       se subtrct ho jaayenge 
+    */
+}
+
+/* ctrl + D will help u to give u multiple cursors on closing and opening tag of the 
+   element 
+*/

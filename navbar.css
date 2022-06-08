@@ -1,0 +1,98 @@
+
+.nav{
+    
+    display: flex;
+    background-color: #424242;
+    color: aliceblue;
+    justify-content: end;
+    height: 2rem;
+    padding: 10px;
+    /* flex-direction:row-reverse */
+/* 
+   justify content : ye x-axis ke along items to align karta hai 
+   align items: ye y axis ke along items ko align karta hai but is case me parent container ki
+   view port height be sufficent honi chahiye to y axis ke along items ko assign karne se pehle
+
+
+   chaar most important properties hoti hai jo use hoti hai 
+   display, justify content , align items, flex-direction
+   
+   align-content : this property only works we have multiple lines in the flex container 
+   ex : aapne khub saare div elements liye hai parent container ke andar to wo saare containers
+   ek hi line pe align honge multiple lines pe nahi honge as per the flex property. 
+   
+   So if u dont want ki box ka size small ho aur saare elements ek hi line me wrap ho to in that case
+   hume flex-wrap:wrap select karna hoga taaki inside elements ka size same rahe
+   
+   Saare child elements (even jo multiple line pe bhi hai)center pe laane ho to humien 
+   align-content:center kar dete hai property me ... which is along the vertical axes 
+   
+   align-self property use hoti hai kisi particular child element ko move karne ke liye uski current
+   position se
+   
+   align-self property sirf elements pe apply hoti hai na ki container pe align-self:flex-start
+   it will orverride the align-items propperty 
+   
+   
+
+   Sizing Items :  
+   flex-basis (the inital size of the flex items)
+   flex-grow: (the growth factor)
+   flex-shrink: (shrink factor )
+   flex: shorthand for above three properties 
+   
+   flex-basis:10rem it will override the width property and will change the size of each item to 
+   10rem .... so even if u mentioned the width:5rem it will be overrided by flex-basis
+   
+   we can apply flexbasis property to an indidvidual elements as well.
+   
+   flex-grow:1  so suppose aapke flexbox me only three items hai to wo three boxes entire space le
+   lenge within the flexbox .. we can also set the flex grow properties to the individual elements as
+   well 
+
+   if we change the flex-grow:2 in any specific element it doesn't mean ki wo element ka size
+   baaki elements ke comparision me double hoga 
+
+   flex-shrink: it is opposite to the flex-grow propertry 
+    Example:  flex-basis: 15rem , flex-shrink : 1 ye window resize karne par inner elements ko 
+    bhi resize kar dega 
+
+    if agar tum kisi individual element me flex-shrink:0 kar doge to sirf wo element shrink
+    nahi hoga baaki sab shrink honge 
+
+    Key point : flex grow and shrnk just take a number not take any units 
+   
+*/
+
+}
+
+.div1{
+
+    padding: 5px;
+    font-size: large;
+}
+
+.div2{
+
+    padding: 5px;
+    font-size: large;
+}
+
+.div3{
+
+    padding: 5px;
+    font-size: large;
+}
+
+
+@media screen and (min-width:600px){
+
+.container{
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+} 
+
+    

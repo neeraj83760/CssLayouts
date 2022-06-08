@@ -1,0 +1,83 @@
+body{
+
+    margin: 10px;
+    height: 200vh; 
+    /* the above line of code will make 200% the height of the viewport  */
+}
+
+.boxes{
+
+    border: 3px solid lightgrey;
+    position: relative;
+}
+
+.box{
+
+    width: 5rem;
+    height: 5rem;
+}
+
+.box-one{
+
+    background-color: gold;
+    /* position:absolute; */
+}
+
+.box-two{
+
+    background-color: dodgerblue;
+    /* position: relative; */
+    /* position: absolute; */
+    /* When we aboslute position an element it removes from the normal flow of the page 
+       and all the other elements rendered as if the absolutely positioned element doesn't
+       exist 
+
+    */
+    position:fixed;
+    top: 0; 
+    /* The above two lines of code is outside of our container because it's positoned relative
+       to view port so this element also be on the top even if u scroll down 
+    */
+    /* right: 0;  */
+    /* bottom: 0; */
+    /* left:4rem;
+    bottom: 4rem;
+    z-index: -1;  */
+    /* if we write -5rem it will move the box in the oppositive direction  which is 
+       also equal to right: 5rem 
+       in the same we can move the box top: 2rem and bottom: 2rem as well 
+
+
+       KeyNote: positioning this box will not impact on the above gold box or bottom 
+       tomato box 
+    */
+
+    /* after giving the bottom property the dogerblue box will partiallly overlap the
+       gold box becoz it comes last in the DOM but we can easyliy change the 
+       stacking order of the elements .... we can set the z-index property either +ive or
+       -ive along the z-axis to change the stack order of the element 
+        the element along the ..z-index:-1 means away from us and +1 means towards us 
+    */
+
+    /* With absolute positioning we can move the elements relative to it;s container
+       
+    so you first need set the position property of the container so please add
+    the property to relative in the parent box 
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    set the above properties the the respective container which u want to move 
+    Note: whenever u use 0 number u no need to specify the unit 
+
+    If we set the position to fix 
+
+
+    */
+}
+
+.box-three{
+
+    background-color: tomato;
+}
