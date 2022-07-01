@@ -82,6 +82,14 @@
    grid-column:
    grid-aera: this is the combination of the above two properties 
 
+kisi container ko specific grid me rakhne ka best way hai row-start, colmn-start, row-end , column-end sab do to correct 
+idea lagega ki exact container ko grid me exactly kaha rakhna hai 
+
+ grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 4;
+
 */
 
 /* Grid template areas : placing items in the named area
